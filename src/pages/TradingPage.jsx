@@ -5,11 +5,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { companies } from '../data/site'
 import { useReveals } from '../lib/useReveals'
+import { useSectionNav } from '../lib/useSectionNav'
 import Img from '../components/Img'
 
 export default function TradingPage() {
   const company = companies.find((c) => c.id === 'trading')
   const galleryRef = useRef(null)
+  const { goSection } = useSectionNav()
   useReveals([])
 
   useEffect(() => {
@@ -215,12 +217,12 @@ export default function TradingPage() {
           <p className="text-xl mb-10 max-w-[600px] mx-auto text-blue-50">
             Partner with us to source products at scale and reach markets worldwide.
           </p>
-          <Link
-            to="/#contact"
+          <button
+            onClick={() => goSection('#contact')}
             className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-blue-50 text-blue-600 font-medium rounded-full transition-colors"
           >
             Explore partnerships
-          </Link>
+          </button>
         </div>
       </section>
     </main>

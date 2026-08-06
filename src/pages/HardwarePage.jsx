@@ -5,11 +5,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { companies } from '../data/site'
 import { useReveals } from '../lib/useReveals'
+import { useSectionNav } from '../lib/useSectionNav'
 import Img from '../components/Img'
 
 export default function HardwarePage() {
   const company = companies.find((c) => c.id === 'hardware-sanitary')
   const offeredRef = useRef(null)
+  const { goSection } = useSectionNav()
   useReveals([])
 
   useEffect(() => {
@@ -193,12 +195,12 @@ export default function HardwarePage() {
           <p className="text-lg text-ink-soft mb-10 max-w-[600px] mx-auto">
             Whether you're a contractor, retailer, or homeowner, we have the right solution.
           </p>
-          <Link
-            to="/#contact"
+          <button
+            onClick={() => goSection('#contact')}
             className="inline-flex items-center gap-2 px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors"
           >
             Start a project
-          </Link>
+          </button>
         </div>
       </section>
     </main>

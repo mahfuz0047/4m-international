@@ -5,11 +5,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { companies } from '../data/site'
 import { useReveals } from '../lib/useReveals'
+import { useSectionNav } from '../lib/useSectionNav'
 import Img from '../components/Img'
 
 export default function AgroPage() {
   const company = companies.find((c) => c.id === 'agro')
   const galleryRef = useRef(null)
+  const { goSection } = useSectionNav()
   useReveals([])
 
   useEffect(() => {
@@ -168,12 +170,12 @@ export default function AgroPage() {
           <p className="text-lg text-ink-soft mb-10 max-w-[600px] mx-auto">
             Discover how modern farming and agro-processing can strengthen your supply chain.
           </p>
-          <Link
-            to="/#contact"
+          <button
+            onClick={() => goSection('#contact')}
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-full transition-colors"
           >
             Get in touch
-          </Link>
+          </button>
         </div>
       </section>
     </main>
