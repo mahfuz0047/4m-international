@@ -9,7 +9,9 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import CompaniesListing from './pages/CompaniesListing'
-import CompanyPage from './pages/CompanyPage'
+import AgroPage from './pages/AgroPage'
+import HardwarePage from './pages/HardwarePage'
+import TradingPage from './pages/TradingPage'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -60,7 +62,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/companies" element={<CompaniesListing />} />
-        <Route path="/companies/:slug" element={<CompanyPage />} />
+        <Route path="/companies/agro" element={<AgroPage />} />
+        <Route path="/companies/hardware-sanitary" element={<HardwarePage />} />
+        <Route path="/companies/trading" element={<TradingPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
