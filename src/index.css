@@ -40,6 +40,12 @@
     text-rendering: optimizeLegibility;
     scroll-behavior: auto; /* Lenis owns smooth scroll */
     touch-action: manipulation; /* Disable pinch-to-zoom */
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 
   body {
