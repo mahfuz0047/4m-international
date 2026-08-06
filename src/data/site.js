@@ -25,7 +25,7 @@ const ph = (seed, w, h) => {
 const img = (file, seed, w, h) => ({ src: `/images/${file}`, fb: ph(seed, w, h) })
 
 export const brand = {
-  name: '4M International',
+  name: '4M INTERNATIONAL',
   short: '4M',
   tagline: 'Splendor of Global Business.',
   logo: '/images/logo-mark.png',
