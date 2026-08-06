@@ -8,6 +8,7 @@ import { setLenis, getLenis, getPending, prefersReducedMotion } from './lib/smoo
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import CompaniesListing from './pages/CompaniesListing'
 import CompanyPage from './pages/CompanyPage'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -58,6 +59,7 @@ export default function App() {
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/companies" element={<CompaniesListing />} />
         <Route path="/companies/:slug" element={<CompanyPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
