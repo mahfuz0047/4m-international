@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — light, blue-forward (from the 4M logo)              */
+/* ------------------------------------------------------------------ */
+@theme {
+  --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+
+  /* surfaces */
+  --color-paper: #f4f6fa;     /* page background (cool off-white) */
+  --color-surface: #ffffff;   /* cards / raised panels */
+  --color-surface-2: #e9eef6; /* subtle alt sections / inputs */
+  --color-line: #dce3ee;      /* hairlines / borders */
+
+  /* text (deep navy family) */
+  --color-ink: #0b1730;       /* headings + primary text */
+  --color-ink-soft: #49556e;  /* body copy */
+  --color-ink-mute: #7d889f;  /* labels / captions */
+
+  /* primary accent: royal blue (logo "4M") */
+  --color-azure: #2f6fe0;
+  --color-azure-bright: #1c5fd6; /* hover (deeper for contrast) */
+  --color-azure-deep: #0a2152;   /* navy (footer, deep panels) */
+
+  /* secondary accent: gold (logo ring) — decorative + AA text variant */
+  --color-gold: #c9a24a;
+  --color-gold-deep: #8a6a23;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* Base element styles MUST live in @layer base so that Tailwind text-color
+   utilities (e.g. text-white on a dark section) can override them. */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis owns smooth scroll */
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+    margin: 0;
+    color: var(--color-ink);
+  }
+}
+
+::selection {
+  background: var(--color-azure);
+  color: #ffffff;
+}
+
+/* Custom scrollbar (desktop) */
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--color-surface-2); }
+::-webkit-scrollbar-thumb { background: #c2cde0; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-azure); }
+
+/* ------------------------------------------------------------------ */
+/* Helpers                                                             */
+/* ------------------------------------------------------------------ */
+.shell {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px)  { .shell { padding-inline: 2rem; } }
+@media (min-width: 1280px) { .shell { padding-inline: 3rem; } }
+
+.link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-sweep:hover { background-size: 100% 1px; }
+
+/* brand lettermark fill — royal blue gradient from the 4M logo */
+.brand-mark {
+  background-image: linear-gradient(140deg, var(--color-azure), var(--color-azure-deep));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  html { scroll-behavior: auto; }
+}
