@@ -38,13 +38,13 @@ export default function AgroPage() {
     <main>
       {/* Back link */}
       <div className="fixed left-4 top-20 z-40 lg:left-8">
-        <Link
-          to="/companies"
+        <button
+          onClick={() => window.history.back()}
           className="inline-flex items-center gap-2 text-sm font-medium text-ink-soft hover:text-ink transition-colors"
         >
           <ArrowLeft size={18} weight="bold" />
           Back
-        </Link>
+        </button>
       </div>
 
       {/* Hero with organic gradient */}
