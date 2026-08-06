@@ -69,9 +69,6 @@ export default function Hero() {
       <div ref={content} className="relative z-10 flex min-h-[100dvh] items-end">
         <div className="shell w-full pb-20 pt-32 md:pb-28">
           <h1 className="max-w-[18ch] font-display text-[clamp(2.6rem,7.6vw,7rem)] font-medium leading-[1.0] text-ink">
-            <span className="block overflow-hidden pb-[0.05em]">
-              <span className="hero-line block" style={{ color: '#FF0000' }}>✓ DEPLOYMENT TEST</span>
-            </span>
             {hero.title.map((line, i) => (
               <span key={i} className="block overflow-hidden pb-[0.05em]">
                 <span className="hero-line block">{line}</span>
