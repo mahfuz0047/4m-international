@@ -107,7 +107,29 @@ export default function AgroPage() {
                 <h3 className="font-display text-2xl text-ink mb-3 relative z-10">
                   {offering.title}
                 </h3>
-                <p className="text-ink-soft">{offering.body}</p>
+                <p className="text-ink-soft mb-4">{offering.body}</p>
+                <div className="text-sm text-ink-mute space-y-2">
+                  {i === 0 && (
+                    <>
+                      <p>We cultivate a diverse range of staple and cash crops using sustainable farming practices. Our well-managed agricultural land spans multiple hectares, employing modern techniques to maximize yield while preserving soil health and environmental sustainability.</p>
+                    </>
+                  )}
+                  {i === 1 && (
+                    <>
+                      <p>Our state-of-the-art processing facilities transform raw produce into value-added products. From cleaning and sorting to packaging, we ensure quality standards meet both domestic and export requirements, reducing post-harvest losses significantly.</p>
+                    </>
+                  )}
+                  {i === 2 && (
+                    <>
+                      <p>We maintain responsible livestock and poultry operations that prioritize animal welfare and product quality. Our biosecurity protocols and veterinary oversight ensure healthy, disease-free production that meets food safety regulations.</p>
+                    </>
+                  )}
+                  {i === 3 && (
+                    <>
+                      <p>Our robust distribution network moves fresh produce and processed foods from farm to market with efficiency and care. We've invested in cold chain infrastructure to preserve quality and minimize spoilage, serving retailers and consumers nationwide.</p>
+                    </>
+                  )}
+                </div>
               </div>
             ))}
           </div>

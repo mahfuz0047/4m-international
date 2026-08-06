@@ -127,7 +127,29 @@ export default function HardwarePage() {
                 <h3 className="font-display text-2xl text-ink mb-3">
                   {offering.title}
                 </h3>
-                <p className="text-ink-soft">{offering.body}</p>
+                <p className="text-ink-soft mb-4">{offering.body}</p>
+                <div className="text-sm text-ink-mute space-y-2">
+                  {i === 0 && (
+                    <>
+                      <p>From hand tools and power equipment to fasteners and safety gear, our comprehensive hardware range serves professionals and homeowners alike. We stock branded and reliable options for every project scale and budget.</p>
+                    </>
+                  )}
+                  {i === 1 && (
+                    <>
+                      <p>Complete bathroom and sanitary solutions including fixtures, ceramics, and accessories that blend functionality with modern design. Our range accommodates all budget segments while maintaining quality standards across the board.</p>
+                    </>
+                  )}
+                  {i === 2 && (
+                    <>
+                      <p>Comprehensive piping systems and plumbing fixtures for residential, commercial, and industrial applications. We supply PVC, copper, and steel solutions with expert guidance on material selection for optimal performance and longevity.</p>
+                    </>
+                  )}
+                  {i === 3 && (
+                    <>
+                      <p>Bulk supply agreements tailored for contractors and retailers who need consistent, reliable inventory. Our logistics ensure timely delivery and competitive pricing for high-volume orders, supporting your business growth.</p>
+                    </>
+                  )}
+                </div>
               </div>
             ))}
           </div>

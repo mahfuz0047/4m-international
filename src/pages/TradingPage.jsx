@@ -124,7 +124,29 @@ export default function TradingPage() {
                   <h3 className="font-display text-xl text-ink mb-3 group-hover:text-blue-600 transition-colors">
                     {offering.title}
                   </h3>
-                  <p className="text-sm text-ink-soft">{offering.body}</p>
+                  <p className="text-sm text-ink-soft mb-3">{offering.body}</p>
+                  <div className="text-xs text-ink-mute space-y-2">
+                    {i === 0 && (
+                      <>
+                        <p>We maintain established relationships with reliable international suppliers and shipping partners. Our import/export expertise covers documentation, compliance, and customs procedures, enabling seamless cross-border transactions with full transparency and tracking.</p>
+                      </>
+                    )}
+                    {i === 1 && (
+                      <>
+                        <p>Through strategic vendor partnerships and market intelligence, we identify and source products that meet quality standards and price competitiveness. Our procurement team negotiates bulk agreements, ensuring you get the best value at scale.</p>
+                      </>
+                    )}
+                    {i === 2 && (
+                      <>
+                        <p>Our nationwide distribution network reaches every corner of Bangladesh with efficient logistics. Real-time tracking systems and multiple warehousing hubs ensure on-time delivery and inventory availability across your markets.</p>
+                      </>
+                    )}
+                    {i === 3 && (
+                      <>
+                        <p>Dedicated wholesale supply programs with flexible payment terms and volume discounts support retailers and businesses at any scale. Our supply chain reliability means you can focus on sales while we manage inventory and delivery.</p>
+                      </>
+                    )}
+                  </div>
                 </div>
 
                 <div className="mt-4 h-1 w-0 bg-gradient-to-r from-blue-400 to-cyan-500 group-hover:w-full transition-all duration-300" />
