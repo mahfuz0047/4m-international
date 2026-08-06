@@ -50,12 +50,13 @@ export default function Stats() {
         >
           A diversified group, built on disciplined fundamentals.
         </p>
-        <div className="mt-12 flex items-end gap-16 md:gap-24">
+        <div className="mt-12 flex items-end gap-8 md:gap-16 lg:gap-24">
           {stats.map((s, i) => (
             <div data-reveal key={i} className="flex flex-col">
               <div className="flex items-baseline gap-1">
                 <span
-                  className="stat-num font-display text-5xl font-medium text-azure md:text-6xl lg:text-7xl"
+                  className="stat-num font-display font-medium text-azure"
+                  style={{ fontSize: 'clamp(2rem, 8vw, 7rem)' }}
                   data-value={s.value}
                   data-plain={s.plain ? '1' : '0'}
                 >
